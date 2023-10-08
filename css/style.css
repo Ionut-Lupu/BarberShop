@@ -181,10 +181,13 @@ h6 {
   flex: 0 1 50%;
 }
 
+.section-images{
+  display: flex;
+}
+
 .section-images img + img {
   margin-left: 30px;
 }
-
 
 .prices {
   display: flex;
