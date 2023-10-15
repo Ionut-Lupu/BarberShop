@@ -157,7 +157,7 @@
         </div>
 
         <div class="centered-container">
-          <button class="button">Book a Service</button>
+          <button data-modal-open class="button">Book a Service</button>
         </div>
       </section>
 
@@ -203,65 +203,83 @@
         <h3>for true connoisseurs of the atmosphere</h3>
         <h2>Our Barbers</h2>
 
-        <div>
-          <img src="images/barber-john-smith.png" alt="John Smith" />
-          <br />
-          <span>John Smith</span>
-          <br />
-          <span>Extreme Barber</span>
-          <br />
-          <img src="images/instagram_2.png" alt="instagram" />
-          <img src="images/twitter_1.png" alt="twitter" />
-          <img src="images/facebook_1.png" alt="facebook" />
-          <img src="images/linkedin_1.png" alt="linkedin" />
-          <br />
-        </div>
-
-        <div>
-          <img src="images/barber-michele-doe.png" alt="Michael Doe" />
-          <br />
-          <span>Michele Doe</span>
-          <br />
-          <span>Extreme Barber</span>
-          <br />
-          <img src="images/instagram_2.png" alt="instagram" />
-          <img src="images/twitter_1.png" alt="twitter" />
-          <img src="images/facebook_1.png" alt="facebook" />
-          <img src="images/linkedin_1.png" alt="linkedin" />
-          <br />
-          <img src="images/barber-alan-black.png" alt="Alan Black" />
-          <br />
-        </div>
-
-        <div>
-          <span>Alan black</span>
-          <br />
-          <span>Extreme Barber</span>
-          <br />
-          <img src="images/instagram_2.png" alt="instagram" />
-          <img src="images/twitter_1.png" alt="twitter" />
-          <img src="images/facebook_1.png" alt="facebook" />
-          <img src="images/linkedin_1.png" alt="linkedin" />
-          <br />
-        </div>
-      </section>
-      <!--Foto Galery section-->
-      <section>
-        <img src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
-        <h3>In Latin, "barba" means "beard"</h3>
-        <img src="images/barber-gallery-1.png" alt="barber" />
-        <img src="images/barber-gallery-2.png" alt="barber" />
-        <img src="images/barber-gallery-3.png" alt="barber" />
-        <img src="images/barber-gallery-4.png" alt="barber" />
-      </section>
+        <img src="images/barber-john-smith.png" alt="John Smith" />
+        <br />
+        <span>John Smith</span>
+        <br />
+        <span>Extreme Barber</span>       
     </main>
-    <footer></footer>
 
-    <!-- Book Service Modal -->
+     <!-- Book Service Modal -->
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
-        <button class="close-btn" data-modal-close>&times;</button>
-        Continut modal
+        <svg class="close-btn" data-modal-close>
+          <use href="./images/symbol-defs.svg#icon-close"></use>
+        </svg>
+
+        <form action="" method="get" autocomplete="off" class="contact-form">
+          <div class="form-section">
+            <label class="form-label" for="name">Name</label>
+            <div class="input-container">
+              <input
+                class="textfield"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
+              <svg>
+                <use href="./images/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label" for="email">Email</label>
+            <div class="input-container">
+              <input
+                class="textfield"
+                type="text"
+                name="email"
+                id="email"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                required
+              />
+              <svg>
+                <use href="./images/symbol-defs.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label">Comments</label>
+            <textarea placeholder="Enter the text"></textarea>
+          </div>
+
+          <div class="input-container terms-and-conditions-container">
+            <input
+              type="checkbox"
+              class="terms-and-conditions-check"
+              name="terms-and-conditions-check"
+              id="terms-and-conditions-check"
+              value="Checked"
+            />
+            <label
+              class="terms-and-conditions-label"
+              for="terms-and-conditions-check"
+            >
+              <svg class="icon-checkbox">
+                <use href="./images/symbol-defs.svg#icon-checkbox"></use>
+              </svg>
+              <span>
+                I agree with the letter and accept the
+                <a href="#">Terms and Conditions</a>
+              </span>
+            </label>
+          </div>
+
+          <input type="submit" value="Send" />
+        </form>
       </div>
     </div>
 
